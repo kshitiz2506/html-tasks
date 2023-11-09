@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+    <style>
+        
+        table {
+            width: 100%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            border: 3px solid #333;
+        }
+        th,td {
+            padding: 8px;
+        }
+        tr {
+            border-bottom: 1px solid #333; 
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 50%; 
+            padding: 6px; 
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="submit.php" method="post">
+        <table>
+            <colgroup>
+                <col style="width: 20%; border-right: 3px solid #333;"> 
+                <col style="width: 80%;">
+            </colgroup>
+            <tr>
+                <td><label for="firstName">First Name:</label></td>
+                <td><input type="text" id="firstName" name="firstName" required></td>
+            </tr>
+            <tr>
+                <td><label for="lastName">Last Name:</label></td>
+                <td><input type="text" id="lastName" name="lastName" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" id="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td><label for="repassword">Re-enter Password:</label></td>
+                <td><input type="password" id="repassword" name="repassword" required></td>
+            </tr>
+            <tr>
+                <td><label>Gender:</label></td>
+                <td>
+                    <table class="gender-table" border="0"> 
+                        <tr>
+                            <td>
+                                <input type="radio" id="male" name="gender" value="Male" required>
+                                <label for="male">Male</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" id="female" name="gender" value="Female" required>
+                                <label for="female">Female</label>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="age">Age:</label></td>
+                <td><input type="number" id="age" name="age" required></td>
+            </tr>
+            <tr>
+                <td><label for="phoneNumber">Phone Number:</label></td>
+                <td><input type="tel" id="phoneNumber" name="phoneNumber"></td>
+            </tr>
+            <tr>
+                <td><label for="address">Address:</label></td>
+                <td><textarea id="address" name="address" rows="4" required></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="state">State:</label></td>
+                <td><input type="text" id="state" name="state"></td>
+            </tr>
+            <tr>
+                <td><label for="country">Country:</label></td>
+                <td>
+                    <select id="country" name="country" required>
+                        <option value="United States">United States</option>
+                        <option value="Canada">Canada</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Australia">Australia</option>
+                      
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Languages Known:</label></td>
+                <td>
+                    <label class="radio-inline" for="english">
+                        <input type="radio" id="english" name="languagesKnown" value="English" required>
+                        English
+                    </label>
+                    <label class="radio-inline" for="kannada">
+                        <input type="radio" id="kannada" name="languagesKnown" value="Kannada" required>
+                        Kannada
+                    </label>
+                    <label class="radio-inline" for="hindi">
+                        <input type="radio" id="hindi" name="languagesKnown" value="Hindi" required>
+                        Hindi
+                    </label>
+                    <label class="radio-inline" for="telugu">
+                        <input type="radio" id="telugu" name="languagesKnown" value="Telugu" required>
+                        Telugu
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="declaration" name="declaration" required></td>
+                <td><label for="declaration">Hereby I declare all the given details are true</label></td>
+            </tr>
+            <tr>
+                <td><label>Login to <a href="https://www.ethnus.com" target="_blank" rel="noopener noreferrer">Ethnus website</a>:</label></td>
+                <td></td>
+            </tr>
+        </table>
+        <br>
+        <div class="center-submit">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+</html>
